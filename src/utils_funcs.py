@@ -116,6 +116,7 @@ class EDA(object):
         return pd.DataFrame(data=result, columns=cols)
 
     def desc_single_discrete(self, feature=None, min_count=30, label='label', na_value=-1):
+        # todo 显示test占比
         train = self.train.copy()
         test = self.test.copy()
         cat_nums = train[feature].nunique()
